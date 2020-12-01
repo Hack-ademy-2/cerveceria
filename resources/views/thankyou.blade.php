@@ -15,8 +15,9 @@
     <div class="container text-center my-auto">
         <h1 class="mb-1">Thank you for your visit</h1>
         <h3 class="mb-5">
-            <em>How to find the best beer in town</em>
+            <em>Your post has been succesfully created!</em>
         </h3>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{route('breweries')}}">Go to see your brewery!</a>
         
     </div>
     <div class="overlay"></div>

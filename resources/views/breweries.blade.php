@@ -11,13 +11,13 @@
       <h3 class="mb-5 text-muted">
         <em>Añadidas por los usuarios</em>
       </h3>
-      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#formValido">Conocerlas!</a>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#creadas">Conocerlas!</a>
       
     </div>
     <div class="overlay"></div>
   </header>
  <!-- Portfolio -->
- <section class="content-section" id="portfolio">
+ <section class="content-section" id="creadas">
     <div class="container">
       <div class="content-section-heading text-center">
         <h3 class="text-secondary mb-0">Cervecerias</h3>
@@ -26,7 +26,7 @@
       <div class="row no-gutters">
           @foreach($breweries as $brewery) 
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
+          <a class="portfolio-item">
             <div class="caption">
               <div class="caption-content">
                 <div class="h2">{{$brewery->title}}</div>
