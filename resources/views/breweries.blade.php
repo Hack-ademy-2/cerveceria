@@ -7,9 +7,9 @@
 </style>
 <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <h1 class="mb-1">    </h1>
-      <h3 class="mb-5">
-        <em>   </em>
+      <h1 class="mb-1 text-white">Cervecerias</h1>
+      <h3 class="mb-5 text-muted">
+        <em>Añadidas por los usuarios</em>
       </h3>
       
     </div>
@@ -19,8 +19,8 @@
  <section class="content-section" id="portfolio">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
+        <h3 class="text-secondary mb-0">Cervecerias</h3>
+        <h2 class="mb-5">Añadidas Recientemente</h2>
       </div>
       <div class="row no-gutters">
           @foreach($breweries as $brewery) 
@@ -32,7 +32,7 @@
                 <p class="mb-0">{{$brewery->description}}</p>
               </div>
             </div>
-            <img class="img-fluid" src="{{$brewery->img}}" alt="">
+            <img class="img-fluid" src="{{Storage::url($brewery->img)}}" alt="{{$brewery->title}}">
           </a>
         </div>
          @endforeach

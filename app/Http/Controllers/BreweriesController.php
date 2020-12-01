@@ -14,6 +14,7 @@ class BreweriesController extends Controller
         $title = $request->input('title');
         $description = $request->input('description');
         
+        $img = $request->file('img')->store('public/img');
        
 
         //DB::table('breweries')->insert(
@@ -28,7 +29,7 @@ class BreweriesController extends Controller
          $brewerynotify = new Brewery;
          $brewerynotify->title = $title;
          $brewerynotify->description = $description;
-         $brewerynotify->img = '/img/worstplace.png';
+         $brewerynotify->img = $img;
          $brewerynotify->save();
          
          return redirect()->route('thankyou');
@@ -37,12 +38,4 @@ class BreweriesController extends Controller
     {
          return view('thankyou');
     }
-        
-    protected function getredirect()
-    {    
-        $url = $this->redirect->getredirect();
-        return $url->previous();
-    }
-
-
 }

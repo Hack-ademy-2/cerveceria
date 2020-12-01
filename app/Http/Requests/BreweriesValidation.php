@@ -22,10 +22,18 @@ class BreweriesValidation extends FormRequest
      * @return array
      */
     public function rules()
-    {
+    {   
         return [
             'title' => 'required|unique:breweries|max:255',
-        'description' => 'required|min:50|max:255',
+            'description' => 'required|min:50|max:255',
         ];
+    }
+
+    //redirigir al mismo sitio si algo va mal
+
+    protected function getRedirectUrl()
+    {
+        $url = $this->redirector->getUrlGenerator();
+        return $url->previous() . '#formValido';
     }
 }

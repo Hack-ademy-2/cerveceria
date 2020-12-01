@@ -22,7 +22,7 @@
         <h3 class="mb-5">
             <em>How to find the best beer in town</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Drink up</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#formValido">Añade tu cerveceria</a>
     </div>
     <div class="overlay"></div>
 </header>
@@ -79,11 +79,11 @@
 
 <!-- Callout -->
 <section class="callout formmasthead">
-    <div class="container-fluid p-5 text-center bg-trasparency">
+    <div class="container-fluid p-5 text-center bg-trasparency" id="formValido">
         <h2 class="mx-auto mb-5">Welcome to
             <em>our</em>
             beer home!</h2>
-        <form action="{{route('breweries.notification')}}" method="POST">
+        <form action="{{route('breweries.notification')}}" method="POST" enctype='multipart/form-data'>
             @csrf
             <div class="form-group">
                 <label for="exampleFormControlInput1">Beer Title</label>
@@ -101,8 +101,12 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="form-group">
+                <input type="file" id="img" name="img">
+            </div>
+            <div>
             <button class="btn btn-xl btn-light mr-4" type='sumbit'>Cheers!</button>
-
+            </div>
         </form>
     </div>
 </section>
