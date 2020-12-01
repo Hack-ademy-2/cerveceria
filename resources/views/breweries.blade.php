@@ -11,6 +11,7 @@
       <h3 class="mb-5 text-muted">
         <em>Añadidas por los usuarios</em>
       </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#formValido">Conocerlas!</a>
       
     </div>
     <div class="overlay"></div>
