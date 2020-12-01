@@ -14,6 +14,8 @@ class BreweriesController extends Controller
         $title = $request->input('title');
         $description = $request->input('description');
         
+        
+
         $img = $request->file('img')->store('public/img');
        
 
